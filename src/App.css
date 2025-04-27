@@ -92,6 +92,7 @@ html, body, #root {
   box-shadow: 0 8px 25px rgba(64, 112, 186, 0.7);
 }
 
+/* Base styles (PC layout) */
 .categories-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -113,12 +114,15 @@ html, body, #root {
   justify-content: center;
   min-height: 150px;
   position: relative;
+  gap: 8px;
 }
 
 .category-card h2 {
   color: #4070ba;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-size: 1.3rem;
+  text-align: center;
+  width: 100%;
 }
 
 .category-card img {
@@ -126,24 +130,26 @@ html, body, #root {
   height: 100px;
   object-fit: cover;
   border-radius: 8px;
-  margin: 10px 0;
+  margin: 5px 0;
 }
 
 .category-card p {
-  margin: 6px 0;
+  margin: 2px 0;
   font-size: 1rem;
-  line-height: 1.4;
+  line-height: 1.2;
+  text-align: center;
+  width: 100%;
 }
 
 .value-text {
   color: #4070ba;
   font-weight: bold;
   font-size: 1.1rem;
-  margin-top: 10px;
+  margin-top: 5px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 2px;
 }
 
 .monetary-value {
@@ -320,6 +326,7 @@ html, body, #root {
   }
 }
 
+/* Mobile layout - only applies below 768px */
 @media (max-width: 768px) {
   .categories-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -329,21 +336,25 @@ html, body, #root {
   }
 
   .category-card {
-    min-height: 120px;
+    min-height: 140px;
     padding: 10px;
+    gap: 4px;
   }
 
   .category-card h2 {
     font-size: 1rem;
+    margin-bottom: 2px;
   }
 
   .category-card p {
     font-size: 0.8rem;
+    margin: 1px 0;
   }
 
   .category-card img {
     width: 80px;
     height: 80px;
+    margin: 2px 0;
   }
 
   .header {
@@ -369,12 +380,13 @@ html, body, #root {
   }
 
   .ranking {
-    width: 90%;
-    height: auto;
-    position: relative;
-    margin: 20px auto;
-    right: auto;
-    bottom: auto;
+    position: fixed;
+    bottom: 20px;
+    right: 105px;
+    width: 400px;
+    height: 150px;
+    padding: 10px;
+    margin-bottom: 20px;
   }
 
   .current-value {
@@ -389,10 +401,11 @@ html, body, #root {
 
   .value-text {
     font-size: 0.9rem;
-    gap: 5px;
+    gap: 1px;
   }
 }
 
+/* Small mobile layout - only applies below 480px */
 @media (max-width: 480px) {
   .categories-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -400,7 +413,7 @@ html, body, #root {
   }
 
   .category-card {
-    min-height: 100px;
+    min-height: 120px;
   }
 
   .category-card img {
@@ -418,6 +431,14 @@ html, body, #root {
 
   .game-complete p {
     font-size: 1rem;
+  }
+
+  .ranking {
+    width: 90%;
+    right: 5%;
+    bottom: 20px;
+    height: auto;
+    min-height: 120px;
   }
 }
 
