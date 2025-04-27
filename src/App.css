@@ -324,26 +324,21 @@ html, body, #root {
 
 /* Mobile layout - This will only apply below 768px */
 @media (max-width: 768px) {
+  .app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+  }
+
   .categories-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 180px);
     gap: 15px;
     padding: 15px;
-    max-height: none;
+    flex: 1;
     overflow-y: auto;
-    margin-bottom: 200px;
-  }
-
-  .instruction-text {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    right: 0;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 90;
-    margin: 0;
   }
 
   .category-card {
@@ -410,6 +405,18 @@ html, body, #root {
     max-width: 500px;
     margin: 0;
     z-index: 100;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .game-complete button {
+    margin-top: auto;
+    margin-bottom: 0;
   }
 
   .ranking {
@@ -435,7 +442,6 @@ html, body, #root {
     grid-template-rows: repeat(4, 160px);
     gap: 12px;
     padding: 12px;
-    margin-bottom: 180px;
   }
 
   .category-card {
@@ -459,6 +465,7 @@ html, body, #root {
 
   .game-complete {
     width: 95%;
+    padding: 15px;
   }
 
   .ranking {
