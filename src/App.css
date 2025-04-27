@@ -115,18 +115,18 @@ html, body, #root {
   position: relative;
 }
 
+.category-card h2 {
+  color: #4070ba;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
 .category-card img {
   width: 100px;
   height: 100px;
   object-fit: cover;
   border-radius: 8px;
   margin: 10px 0;
-}
-
-.category-card h2 {
-  color: #4070ba;
-  margin-bottom: 10px;
-  font-size: 1.3rem;
 }
 
 .category-card p {
@@ -333,6 +333,14 @@ html, body, #root {
     padding: 10px;
   }
 
+  .category-card h2 {
+    font-size: 1rem;
+  }
+
+  .category-card p {
+    font-size: 0.8rem;
+  }
+
   .category-card img {
     width: 80px;
     height: 80px;
@@ -377,6 +385,11 @@ html, body, #root {
   .start-button {
     padding: 15px 30px;
     font-size: 1.2rem;
+  }
+
+  .value-text {
+    font-size: 0.9rem;
+    gap: 5px;
   }
 }
 
