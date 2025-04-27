@@ -327,7 +327,7 @@ html, body, #root {
   .categories-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(4, 180px);
     gap: 15px;
     padding: 15px;
     max-height: none;
@@ -336,48 +336,51 @@ html, body, #root {
   }
 
   .category-card {
-    min-height: 160px;
-    padding: 10px;
+    height: 180px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
-    transition: opacity 0.3s ease;
+    position: relative;
   }
 
   .category-card.locked {
     opacity: 0.5;
     background: rgba(64, 112, 186, 0.2);
+    pointer-events: none;
   }
 
   .category-card h2 {
     font-size: 1rem;
-    margin-bottom: 5px;
-    margin-top: 0;
-    padding: 5px;
+    margin: 0;
+    padding: 0;
     line-height: 1.2;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    width: 100%;
+    color: #4070ba;
     text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 10px;
   }
 
   .category-card p {
     font-size: 0.9rem;
-    margin: 5px 0;
+    margin: 0;
     line-height: 1.2;
     text-align: center;
     width: 100%;
+    position: absolute;
+    bottom: 10px;
   }
 
   .category-card img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     border-radius: 8px;
-    margin: 5px 0;
+    margin: 30px 0;
   }
 
   /* Hide value displays on mobile */
@@ -406,19 +409,19 @@ html, body, #root {
 /* Small mobile layout - This will only apply below 480px */
 @media (max-width: 480px) {
   .categories-grid {
+    grid-template-rows: repeat(4, 160px);
     gap: 12px;
     padding: 12px;
     margin-bottom: 180px;
   }
 
   .category-card {
-    min-height: 140px;
-    padding: 8px;
+    height: 160px;
+    padding: 12px;
   }
 
   .category-card h2 {
     font-size: 0.9rem;
-    padding: 4px;
   }
 
   .category-card p {
@@ -426,8 +429,9 @@ html, body, #root {
   }
 
   .category-card img {
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
+    margin: 25px 0;
   }
 
   .game-complete {
